@@ -1,8 +1,7 @@
-import {pageLoad} from './pageLoad';
+import { pageLoad } from "./pageLoad";
 
-pageLoad();
+const domElements = {
+  content: document.getElementById("#content"),
+};
 
-
-console.log('testrun 2')
-
-
+pageLoad(content);
