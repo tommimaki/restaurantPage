@@ -1,0 +1,1 @@
+(()=>{"use strict";(()=>{const t=document.getElementById("#content");console.log(t+"content in pageload")})(),console.log("testrun 2")})();
