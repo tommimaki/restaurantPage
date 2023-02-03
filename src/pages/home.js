@@ -1,4 +1,4 @@
-const homePageLoad = () => {
+const homePage = () => {
     const content = document.querySelector("#content");
     const headingContainer = document.createElement("div");
     headingContainer.classList.add("heading-container");
@@ -20,4 +20,4 @@ const homePageLoad = () => {
     headingContainer.append(descriptionText);
   };
 
-  export {homePageLoad};
+  export {homePage};
