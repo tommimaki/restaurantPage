@@ -1,6 +1,7 @@
 
 const contactPage = () => {
     const header = document.createElement('h1');
+    header.classList.add("main-heading");
     header.innerHTML ='KONTAKTI SIVU'
     content.append(header)
     

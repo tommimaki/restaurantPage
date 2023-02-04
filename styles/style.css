@@ -1,0 +1,46 @@
+.navBar {
+  background-color: rgb(144, 144, 144);
+  height: 50px;
+  display: grid;
+  flex-direction: row;
+  padding: 0 20px;
+  border: 1px black solid;
+  min-width: 100vh;
+}
+.navBar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+.btnContainer {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  max-width: 100vh;
+}
+
+.main-heading {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}
+
+.heading-subtext {
+  border: 1px solid black;
+}
+
+.container {
+  border: 1px red solid;
+  display: grid;
+  grid-template-areas: "textcontent img";
+}
+
+.home-img {
+  grid-area: img;
+  width: 600px;
+  height: 600px;
+  overflow: hidden;
+}/*# sourceMappingURL=style.css.map */

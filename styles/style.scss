@@ -1,0 +1,87 @@
+// Define variables for color and font-size
+$primary-color: rgb(144, 144, 144);
+$secondary-color: #fff;
+$font-size: 16px;
+
+// Create a mixin for the navigation bar style
+@mixin navbar-style {
+  background-color: $primary-color;
+  height: 50px;
+  display: grid;
+  flex-direction: row;
+  padding: 0 20px;
+  border: 1px black solid;
+  min-width: 100vh;
+
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+    font-size: $font-size;
+    margin-right: 20px;
+  }
+}
+
+// Apply the mixin to the navigation bar
+.navBar {
+  @include navbar-style;
+}
+
+@mixin btnContainer-style {
+  display: grid;
+  grid-auto-flow: column;
+    justify-content: space-between;
+    max-width: 100vh
+}
+
+.btnContainer {
+  @include btnContainer-style();
+}
+
+
+
+@mixin header-style {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+    
+}
+.main-heading{
+    @include header-style();
+
+}
+
+@mixin subtext-style {
+    border: 1px solid black;
+    
+}
+
+.heading-subtext{
+    @include subtext-style();
+}
+
+
+@mixin headingContainer-style {
+    border: 1px red solid;
+
+    display: grid;
+
+    grid-template-areas: 
+    'textcontent img';
+    
+}
+
+.container{
+    @include headingContainer-style()
+}
+
+@mixin img-style{
+    grid-area: img;
+    width: 600px;
+    height: 600px;
+    overflow: hidden;
+}
+.home-img{
+    @include img-style();
+ 
+}
