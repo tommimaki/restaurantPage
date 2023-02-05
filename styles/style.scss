@@ -37,6 +37,7 @@ $font-size: 18px;
   justify-content: center;
   padding: 20px;
   grid-area: navbar;
+  
 
   a {
     color: $secondary-color;
@@ -72,6 +73,7 @@ $font-size: 18px;
   font-weight: bold;
   text-align: center;
   text-shadow: 0px 10px 5px black;
+  
 
 
 
@@ -107,10 +109,8 @@ $font-size: 18px;
   grid-area: container;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr 1fr;
   grid-template-areas:
    "textContainer img"
-   "logoContainer logoContainer";
 
   ;
 
@@ -172,16 +172,48 @@ $font-size: 18px;
 .footerContainer{
   grid-area: footer;
   max-height: 130px;
-  border: #fff 2px solid;
+  border-top: #fff 2px solid;
   display: grid;
   align-items: center;
   justify-content: center;
   padding: 20px;
   text-align: center;
   text-decoration: none;
+  position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
 }
 
 
 .github-logo{
   max-height: 100px;
 }
+
+
+.menuContainer{
+  margin-top: 40px;
+  display: grid;
+}
+
+.main-content{
+  text-align: center;
+
+
+  min-height: 300px;
+  display: grid;
+
+}
+
+@mixin menuItems {
+  padding-top: 10px;
+  display: grid;
+}
+
+.starters-content {
+  @include menuItems();
+}
+.pizza-content {
+  @include menuItems();
+}
+

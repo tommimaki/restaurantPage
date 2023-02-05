@@ -8,7 +8,7 @@ const homePage = () => {
 
   const heading = document.createElement("h1");
   heading.classList.add("main-heading");
-  heading.textContent = "Paten Pizzat";
+  heading.textContent = "Paten Pizzeria";
   textContainer.append(heading);
 
   const subtext = document.createElement("h2");
@@ -31,7 +31,7 @@ const homePage = () => {
   const logoContainer = document.createElement('div')
   logoContainer.classList.add('logoContainer')
   logoContainer.textContent = 'logoja tänne tms'
-  container.append(logoContainer);
+  // container.append(logoContainer);
 
   const beerLogo = document.createElement('img')
   beerLogo.src ="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0";
