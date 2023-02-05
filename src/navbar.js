@@ -7,6 +7,7 @@ export default class NavBar {
     home = document.createElement('p');
     menu = document.createElement('p');
     contact = document.createElement('p');
+
     constructor(){
      this.createNav();   
     }
@@ -16,9 +17,9 @@ export default class NavBar {
     
         this.navbar.classList.add('navBar')
         this.btnContainer.classList.add('btnContainer')
-        this.menu.classList.add('menu');
-        this.home.classList.add('home');
-        this.contact.classList.add('contact');
+        this.menu.classList.add('menuBtn');
+        this.home.classList.add('homeBtn');
+        this.contact.classList.add('contactBtn');
 
         this.menu.textContent='Menu';
         this.home.textContent='Home';

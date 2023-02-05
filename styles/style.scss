@@ -1,23 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 // Define variables for color and font-size
 $primary-color: rgb(144, 144, 144);
 $secondary-color: #fff;
-$font-size: 16px;
+$font-size: 18px;
+
+* {
+  font-family: "Open Sans", sans-serif;
+  background-color: rgb(35, 34, 34);
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+ @mixin content-style {
+    display: grid;
+    grid-template-areas: 
+    'navbar'
+    'container'
+    'footer'
+    ;
+
+ }
+ #content {
+  @include content-style()
+ }
+
 
 // Create a mixin for the navigation bar style
 @mixin navbar-style {
-  background-color: $primary-color;
+  border: 1px solid white;
   height: 50px;
   display: grid;
-  flex-direction: row;
-  padding: 0 20px;
-  border: 1px black solid;
+  box-shadow: 0px 0px 5px 1px $secondary-color;
   min-width: 100vh;
+  justify-content: center;
+  padding: 20px;
+  grid-area: navbar;
 
   a {
     color: $secondary-color;
     text-decoration: none;
     font-size: $font-size;
     margin-right: 20px;
+
   }
 }
 
@@ -29,59 +55,133 @@ $font-size: 16px;
 @mixin btnContainer-style {
   display: grid;
   grid-auto-flow: column;
-    justify-content: space-between;
-    max-width: 100vh
+  align-items: center;
+  justify-content: space-between;
+  min-width: 600px;
+  font-size: large;
 }
 
 .btnContainer {
   @include btnContainer-style();
 }
 
-
-
 @mixin header-style {
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid black;
-    
-}
-.main-heading{
-    @include header-style();
+  display: grid;
+  align-items: center;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0px 10px 5px black;
 
+
+
+
+}
+.main-heading {
+  @include header-style();
 }
 
 @mixin subtext-style {
-    border: 1px solid black;
-    
+  margin-top: -50px;
+  text-transform: lowercase;
+  text-align: center;
+  font-weight: 100;
+  font-style: italic;
+  border-bottom: 1px white solid;
+
 }
 
-.heading-subtext{
-    @include subtext-style();
+.heading-subtext {
+  @include subtext-style();
+}
+
+.description-text {
+    padding: 20px;
+    text-align: center;
+
+    margin-bottom: 40px;
+  }
+  
+
+@mixin container-style {
+  grid-area: container;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas:
+   "textContainer img"
+   "logoContainer logoContainer";
+
+  ;
+
+}
+.container {
+  @include container-style();
+}
+@mixin textContainer-style {
+  display: grid;
+  justify-items: center;
+  grid-area: textContainer;
+  min-width: 400px;
+}
+.textContainer {
+  @include textContainer-style();
+}
+
+@mixin logoContainer-style {
+  border: 2px solid $secondary-color;
+    min-height: 100px;
+    grid-area: logoContainer;
+  
+}
+
+.logoContainer{
+ @include logoContainer-style()
 }
 
 
-@mixin headingContainer-style {
-    border: 1px red solid;
 
-    display: grid;
 
-    grid-template-areas: 
-    'textcontent img';
-    
+@mixin img-style {
+  grid-area: img;
+
+}
+.home-img {
+  @include img-style();
 }
 
-.container{
-    @include headingContainer-style()
+@mixin btn-style {
+  // box-shadow: 2px 2px 3px 2px $secondary-color;
+  border: 1px $secondary-color solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-1px);
+  }
 }
 
-@mixin img-style{
-    grid-area: img;
-    width: 600px;
-    height: 600px;
-    overflow: hidden;
+.homeBtn,
+.menuBtn,
+.contactBtn {
+  @include btn-style();
 }
-.home-img{
-    @include img-style();
- 
+
+
+.footerContainer{
+  grid-area: footer;
+  max-height: 130px;
+  border: #fff 2px solid;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+.github-logo{
+  max-height: 100px;
 }
