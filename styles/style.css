@@ -88,6 +88,11 @@
   position: fixed;
   right: 0;
 }
+@media (max-width: 500px) {
+  .home-img {
+    display: none;
+  }
+}
 
 .homeBtn,
 .menuBtn,

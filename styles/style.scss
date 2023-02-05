@@ -147,6 +147,9 @@ $font-size: 18px;
   width: 50%;
   position: fixed;
   right: 0;
+  @media (max-width: 500px) {
+    display: none;
+  }
 
 }
 .home-img {
