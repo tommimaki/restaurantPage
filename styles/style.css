@@ -73,7 +73,7 @@
   display: grid;
   justify-items: center;
   grid-area: textContainer;
-  min-width: 400px;
+  gap: 100px;
 }
 
 .logoContainer {
@@ -84,6 +84,9 @@
 
 .home-img {
   grid-area: img;
+  width: 50%;
+  position: fixed;
+  right: 0;
 }
 
 .homeBtn,
@@ -140,4 +143,12 @@
 .pizza-content {
   padding-top: 10px;
   display: grid;
+}
+
+.contact-info {
+  margin-top: 100px;
+  display: grid;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */

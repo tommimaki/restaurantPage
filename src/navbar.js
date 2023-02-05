@@ -22,8 +22,8 @@ export default class NavBar {
         this.contact.classList.add('contactBtn');
 
         this.menu.textContent='Menu';
-        this.home.textContent='Home';
-        this.contact.textContent='Contact';
+        this.home.textContent='Etusivu';
+        this.contact.textContent='Yhteystiedot';
 
         this.btnContainer.append(this.home, this.menu, this.contact);
 

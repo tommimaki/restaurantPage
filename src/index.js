@@ -18,7 +18,7 @@ const clearContent = () => {
 };
 
 window.onload = () => {
-  tabs("menuBtn");
+  tabs("homeBtn");
 };
 
 const buttons = [homeButton, menuButton, contactButton];

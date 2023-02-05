@@ -122,7 +122,7 @@ $font-size: 18px;
   display: grid;
   justify-items: center;
   grid-area: textContainer;
-  min-width: 400px;
+  gap: 100px;
 }
 .textContainer {
   @include textContainer-style();
@@ -144,6 +144,9 @@ $font-size: 18px;
 
 @mixin img-style {
   grid-area: img;
+  width: 50%;
+  position: fixed;
+  right: 0;
 
 }
 .home-img {
@@ -217,3 +220,11 @@ right: 0;
   @include menuItems();
 }
 
+.contact-info{
+  margin-top: 100px;
+  display: grid;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+
+}
